@@ -1,0 +1,1217 @@
+================================================================================
+
+Data Summary Report 01: flights_df
+================================================================================
+
+01.01 - File shape: (15927485, 42)
+
+------------------------------
+
+01.02 - DataFrame columns:
+Index(['fl_date', 'mkt_unique_carrier', 'branded_code_share', 'mkt_carrier',
+       'mkt_carrier_fl_num', 'op_unique_carrier', 'tail_num',
+       'op_carrier_fl_num', 'origin_airport_id', 'origin', 'origin_city_name',
+       'dest_airport_id', 'dest', 'dest_city_name', 'crs_dep_time', 'dep_time',
+       'dep_delay', 'taxi_out', 'wheels_off', 'wheels_on', 'taxi_in',
+       'crs_arr_time', 'arr_time', 'arr_delay', 'cancelled',
+       'cancellation_code', 'diverted', 'dup', 'crs_elapsed_time',
+       'actual_elapsed_time', 'air_time', 'flights', 'distance',
+       'carrier_delay', 'weather_delay', 'nas_delay', 'security_delay',
+       'late_aircraft_delay', 'first_dep_time', 'total_add_gtime',
+       'longest_add_gtime', 'no_name'],
+      dtype='object')
+
+------------------------------
+
+01.03 - DataFrame data types:
+fl_date                 object
+mkt_unique_carrier      object
+branded_code_share      object
+mkt_carrier             object
+mkt_carrier_fl_num       int64
+op_unique_carrier       object
+tail_num                object
+op_carrier_fl_num        int64
+origin_airport_id        int64
+origin                  object
+origin_city_name        object
+dest_airport_id          int64
+dest                    object
+dest_city_name          object
+crs_dep_time             int64
+dep_time               float64
+dep_delay              float64
+taxi_out               float64
+wheels_off             float64
+wheels_on              float64
+taxi_in                float64
+crs_arr_time             int64
+arr_time               float64
+arr_delay              float64
+cancelled              float64
+cancellation_code       object
+diverted               float64
+dup                     object
+crs_elapsed_time       float64
+actual_elapsed_time    float64
+air_time               float64
+flights                float64
+distance               float64
+carrier_delay          float64
+weather_delay          float64
+nas_delay              float64
+security_delay         float64
+late_aircraft_delay    float64
+first_dep_time          object
+total_add_gtime        float64
+longest_add_gtime      float64
+no_name                 object
+dtype: object
+
+------------------------------
+
+01.04 - DataFrame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 15927485 entries, 0 to 15927484
+Data columns (total 42 columns):
+ #   Column               Dtype  
+---  ------               -----  
+ 0   fl_date              object 
+ 1   mkt_unique_carrier   object 
+ 2   branded_code_share   object 
+ 3   mkt_carrier          object 
+ 4   mkt_carrier_fl_num   int64  
+ 5   op_unique_carrier    object 
+ 6   tail_num             object 
+ 7   op_carrier_fl_num    int64  
+ 8   origin_airport_id    int64  
+ 9   origin               object 
+ 10  origin_city_name     object 
+ 11  dest_airport_id      int64  
+ 12  dest                 object 
+ 13  dest_city_name       object 
+ 14  crs_dep_time         int64  
+ 15  dep_time             float64
+ 16  dep_delay            float64
+ 17  taxi_out             float64
+ 18  wheels_off           float64
+ 19  wheels_on            float64
+ 20  taxi_in              float64
+ 21  crs_arr_time         int64  
+ 22  arr_time             float64
+ 23  arr_delay            float64
+ 24  cancelled            float64
+ 25  cancellation_code    object 
+ 26  diverted             float64
+ 27  dup                  object 
+ 28  crs_elapsed_time     float64
+ 29  actual_elapsed_time  float64
+ 30  air_time             float64
+ 31  flights              float64
+ 32  distance             float64
+ 33  carrier_delay        float64
+ 34  weather_delay        float64
+ 35  nas_delay            float64
+ 36  security_delay       float64
+ 37  late_aircraft_delay  float64
+ 38  first_dep_time       object 
+ 39  total_add_gtime      float64
+ 40  longest_add_gtime    float64
+ 41  no_name              object 
+dtypes: float64(22), int64(6), object(14)
+memory usage: 5.0+ GB
+
+
+------------------------------
+
+01.05 - DataFrame description:
+       mkt_carrier_fl_num  op_carrier_fl_num  origin_airport_id  \
+count        1.592748e+07       1.592748e+07       1.592748e+07   
+mean         2.734882e+03       2.734848e+03       1.267961e+04   
+std          1.862390e+03       1.862470e+03       1.522462e+03   
+min          1.000000e+00       1.000000e+00       1.013500e+04   
+25%          1.126000e+03       1.126000e+03       1.129200e+04   
+50%          2.317000e+03       2.317000e+03       1.288900e+04   
+75%          4.324000e+03       4.324000e+03       1.405700e+04   
+max          9.401000e+03       9.401000e+03       1.686900e+04   
+
+       dest_airport_id  crs_dep_time      dep_time     dep_delay  \
+count     1.592748e+07  1.592748e+07  1.566867e+07  1.566373e+07   
+mean      1.267959e+04  1.329794e+03  1.334325e+03  1.054971e+01   
+std       1.522461e+03  4.897481e+02  5.035764e+02  4.780636e+01   
+min       1.013500e+04  1.000000e+00  1.000000e+00 -1.280000e+03   
+25%       1.129200e+04  9.150000e+02  9.170000e+02 -6.000000e+00   
+50%       1.288900e+04  1.321000e+03  1.327000e+03 -2.000000e+00   
+75%       1.405700e+04  1.735000e+03  1.744000e+03  7.000000e+00   
+max       1.686900e+04  2.359000e+03  2.400000e+03  2.976000e+03   
+
+           taxi_out    wheels_off     wheels_on  ...      air_time  \
+count  1.565421e+07  1.565422e+07  1.564632e+07  ...  1.561226e+07   
+mean   1.753314e+01  1.358683e+03  1.459648e+03  ...  1.079393e+02   
+std    1.005476e+01  5.050375e+02  5.326496e+02  ...  6.967538e+01   
+min    0.000000e+00  1.000000e+00  1.000000e+00  ... -1.384000e+03   
+25%    1.100000e+01  9.330000e+02  1.044000e+03  ...  5.800000e+01   
+50%    1.500000e+01  1.341000e+03  1.459000e+03  ...  8.900000e+01   
+75%    2.000000e+01  1.759000e+03  1.909000e+03  ...  1.370000e+02   
+max    1.425000e+03  2.400000e+03  2.400000e+03  ...  1.557000e+03   
+
+          flights      distance  carrier_delay  weather_delay     nas_delay  \
+count  15927485.0  1.592748e+07   3.009484e+06   3.009484e+06  3.009484e+06   
+mean          1.0  7.679726e+02   2.037512e+01   3.674443e+00  1.623685e+01   
+std           0.0  5.858934e+02   6.320810e+01   3.111776e+01  3.775392e+01   
+min           1.0  1.600000e+01   0.000000e+00   0.000000e+00  0.000000e+00   
+25%           1.0  3.380000e+02   0.000000e+00   0.000000e+00  0.000000e+00   
+50%           1.0  6.030000e+02   0.000000e+00   0.000000e+00  3.000000e+00   
+75%           1.0  1.005000e+03   1.700000e+01   0.000000e+00  2.000000e+01   
+max           1.0  5.095000e+03   2.973000e+03   2.900000e+03  1.848000e+03   
+
+       security_delay  late_aircraft_delay  total_add_gtime  longest_add_gtime  
+count    3.009484e+06         3.009484e+06    108933.000000      108936.000000  
+mean     8.853279e-02         2.729212e+01        40.022656          39.358642  
+std      3.135871e+00         5.334582e+01        35.012949          33.735253  
+min      0.000000e+00         0.000000e+00         1.000000           0.000000  
+25%      0.000000e+00         0.000000e+00        17.000000          17.000000  
+50%      0.000000e+00         3.000000e+00        29.000000          29.000000  
+75%      0.000000e+00         3.300000e+01        50.000000          49.000000  
+max      1.078000e+03         2.962000e+03       398.000000         285.000000  
+
+[8 rows x 28 columns]
+
+------------------------------
+
+01.06 - DataFrame unique value counts:
+fl_date                 730
+mkt_unique_carrier       11
+branded_code_share       16
+mkt_carrier              11
+mkt_carrier_fl_num     7226
+op_unique_carrier        28
+tail_num               6487
+op_carrier_fl_num      7252
+origin_airport_id       376
+origin                  376
+origin_city_name        368
+dest_airport_id         376
+dest                    376
+dest_city_name          368
+crs_dep_time           1412
+dep_time               1440
+dep_delay              1749
+taxi_out                195
+wheels_off             1440
+wheels_on              1440
+taxi_in                 231
+crs_arr_time           1437
+arr_time               1440
+arr_delay              1781
+cancelled                 2
+cancellation_code         6
+diverted                  2
+dup                       1
+crs_elapsed_time        693
+actual_elapsed_time     726
+air_time                697
+flights                   1
+distance               1623
+carrier_delay          1540
+weather_delay          1217
+nas_delay              1213
+security_delay          280
+late_aircraft_delay    1226
+first_dep_time         2354
+total_add_gtime         287
+longest_add_gtime       252
+no_name                   0
+dtype: int64
+
+------------------------------
+
+01.07 - DataFrame missing value counts:
+fl_date                       0
+mkt_unique_carrier            0
+branded_code_share            0
+mkt_carrier                   0
+mkt_carrier_fl_num            0
+op_unique_carrier             0
+tail_num                  49269
+op_carrier_fl_num             0
+origin_airport_id             0
+origin                        0
+origin_city_name              0
+dest_airport_id               0
+dest                          0
+dest_city_name                0
+crs_dep_time                  0
+dep_time                 258814
+dep_delay                263754
+taxi_out                 273274
+wheels_off               273264
+wheels_on                281162
+taxi_in                  281172
+crs_arr_time                  0
+arr_time                 275079
+arr_delay                311744
+cancelled                     0
+cancellation_code      15057067
+diverted                      0
+dup                           0
+crs_elapsed_time             20
+actual_elapsed_time      309157
+air_time                 315221
+flights                       0
+distance                      0
+carrier_delay          12918001
+weather_delay          12918001
+nas_delay              12918001
+security_delay         12918001
+late_aircraft_delay    12918001
+first_dep_time         15220740
+total_add_gtime        15818552
+longest_add_gtime      15818549
+no_name                15927485
+dtype: int64
+
+------------------------------
+
+01.08 - DataFrame has missing values: True
+------------------------------
+
+01.09 - DataFrame missing value percentage: 912.41%
+
+------------------------------
+
+01.10 - DataFrame head:
+      fl_date mkt_unique_carrier branded_code_share mkt_carrier  \
+0  2018-05-18                 DL                 DL          DL   
+1  2018-05-18                 DL                 DL          DL   
+2  2018-05-18                 DL                 DL          DL   
+3  2018-05-18                 DL                 DL          DL   
+4  2018-05-18                 DL                 DL          DL   
+
+   mkt_carrier_fl_num op_unique_carrier tail_num  op_carrier_fl_num  \
+0                2249                DL    N3768               2249   
+1                2250                DL   N343NW               2250   
+2                2251                DL   N923AT               2251   
+3                2251                DL   N923AT               2251   
+4                2252                DL   N861DN               2252   
+
+   origin_airport_id origin  ... distance  carrier_delay weather_delay  \
+0              14869    SLC  ...   1828.0            0.0           0.0   
+1              11433    DTW  ...    241.0            NaN           NaN   
+2              10397    ATL  ...    226.0            NaN           NaN   
+3              11057    CLT  ...    226.0            NaN           NaN   
+4              14869    SLC  ...    368.0            NaN           NaN   
+
+  nas_delay  security_delay  late_aircraft_delay  first_dep_time  \
+0      20.0             0.0                  0.0            None   
+1       NaN             NaN                  NaN            None   
+2       NaN             NaN                  NaN            None   
+3       NaN             NaN                  NaN            None   
+4       NaN             NaN                  NaN            None   
+
+   total_add_gtime  longest_add_gtime  no_name  
+0              NaN                NaN     None  
+1              NaN                NaN     None  
+2              NaN                NaN     None  
+3              NaN                NaN     None  
+4              NaN                NaN     None  
+
+[5 rows x 42 columns]
+
+------------------------------
+
+01.11 - DataFrame tail:
+             fl_date mkt_unique_carrier branded_code_share mkt_carrier  \
+15927480  2018-05-18                 DL                 DL          DL   
+15927481  2018-05-18                 DL                 DL          DL   
+15927482  2018-05-18                 DL                 DL          DL   
+15927483  2018-05-18                 DL                 DL          DL   
+15927484  2018-05-18                 DL                 DL          DL   
+
+          mkt_carrier_fl_num op_unique_carrier tail_num  op_carrier_fl_num  \
+15927480                2244                DL   N331NW               2244   
+15927481                2245                DL   N316DN               2245   
+15927482                2245                DL   N316DN               2245   
+15927483                2246                DL   N3735D               2246   
+15927484                2248                DL   N305DN               2248   
+
+          origin_airport_id origin  ... distance  carrier_delay weather_delay  \
+15927480              12478    JFK  ...   1089.0           24.0           0.0   
+15927481              10397    ATL  ...    813.0            NaN           NaN   
+15927482              10423    AUS  ...    813.0            NaN           NaN   
+15927483              12478    JFK  ...   2446.0            0.0           0.0   
+15927484              12953    LGA  ...    762.0            NaN           NaN   
+
+         nas_delay  security_delay  late_aircraft_delay  first_dep_time  \
+15927480       0.0             0.0                  0.0            None   
+15927481       NaN             NaN                  NaN            None   
+15927482       NaN             NaN                  NaN            None   
+15927483      19.0             0.0                  0.0            None   
+15927484       NaN             NaN                  NaN            None   
+
+          total_add_gtime  longest_add_gtime  no_name  
+15927480              NaN                NaN     None  
+15927481              NaN                NaN     None  
+15927482              NaN                NaN     None  
+15927483              NaN                NaN     None  
+15927484              NaN                NaN     None  
+
+[5 rows x 42 columns]
+
+------------------------------
+
+================================================================================
+
+Data Summary Report 02: flights_test_df
+================================================================================
+
+02.01 - File shape: (660556, 20)
+
+------------------------------
+
+02.02 - DataFrame columns:
+Index(['fl_date', 'mkt_unique_carrier', 'branded_code_share', 'mkt_carrier',
+       'mkt_carrier_fl_num', 'op_unique_carrier', 'tail_num',
+       'op_carrier_fl_num', 'origin_airport_id', 'origin', 'origin_city_name',
+       'dest_airport_id', 'dest', 'dest_city_name', 'crs_dep_time',
+       'crs_arr_time', 'dup', 'crs_elapsed_time', 'flights', 'distance'],
+      dtype='object')
+
+------------------------------
+
+02.03 - DataFrame data types:
+fl_date               datetime64[ns]
+mkt_unique_carrier            object
+branded_code_share            object
+mkt_carrier                   object
+mkt_carrier_fl_num             int64
+op_unique_carrier             object
+tail_num                      object
+op_carrier_fl_num              int64
+origin_airport_id              int64
+origin                        object
+origin_city_name              object
+dest_airport_id                int64
+dest                          object
+dest_city_name                object
+crs_dep_time                   int64
+crs_arr_time                   int64
+dup                           object
+crs_elapsed_time               int64
+flights                        int64
+distance                       int64
+dtype: object
+
+------------------------------
+
+02.04 - DataFrame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 660556 entries, 0 to 660555
+Data columns (total 20 columns):
+ #   Column              Non-Null Count   Dtype         
+---  ------              --------------   -----         
+ 0   fl_date             660556 non-null  datetime64[ns]
+ 1   mkt_unique_carrier  660556 non-null  object        
+ 2   branded_code_share  660556 non-null  object        
+ 3   mkt_carrier         660556 non-null  object        
+ 4   mkt_carrier_fl_num  660556 non-null  int64         
+ 5   op_unique_carrier   660556 non-null  object        
+ 6   tail_num            659057 non-null  object        
+ 7   op_carrier_fl_num   660556 non-null  int64         
+ 8   origin_airport_id   660556 non-null  int64         
+ 9   origin              660556 non-null  object        
+ 10  origin_city_name    660556 non-null  object        
+ 11  dest_airport_id     660556 non-null  int64         
+ 12  dest                660556 non-null  object        
+ 13  dest_city_name      660556 non-null  object        
+ 14  crs_dep_time        660556 non-null  int64         
+ 15  crs_arr_time        660556 non-null  int64         
+ 16  dup                 660556 non-null  object        
+ 17  crs_elapsed_time    660556 non-null  int64         
+ 18  flights             660556 non-null  int64         
+ 19  distance            660556 non-null  int64         
+dtypes: datetime64[ns](1), int64(9), object(10)
+memory usage: 100.8+ MB
+
+
+------------------------------
+
+02.05 - DataFrame description:
+       mkt_carrier_fl_num  op_carrier_fl_num  origin_airport_id  \
+count       660556.000000      660556.000000      660556.000000   
+mean          2758.732107        2758.659876       12684.044163   
+std           1839.125706        1839.087396        1524.381513   
+min              1.000000           1.000000       10135.000000   
+25%           1161.000000        1161.000000       11292.000000   
+50%           2358.000000        2358.000000       12889.000000   
+75%           4396.000000        4396.000000       14057.000000   
+max           9336.000000        9336.000000       16869.000000   
+
+       dest_airport_id   crs_dep_time   crs_arr_time  crs_elapsed_time  \
+count    660556.000000  660556.000000  660556.000000     660556.000000   
+mean      12683.860363    1330.097584    1491.814630        140.918700   
+std        1524.262616     486.239023     513.549707         71.570367   
+min       10135.000000       2.000000       1.000000        -77.000000   
+25%       11292.000000     920.000000    1109.000000         90.000000   
+50%       12889.000000    1325.000000    1519.000000        122.000000   
+75%       14057.000000    1732.000000    1920.000000        171.000000   
+max       16869.000000    2359.000000    2400.000000        700.000000   
+
+        flights       distance  
+count  660556.0  660556.000000  
+mean        1.0     765.531673  
+std         0.0     579.020673  
+min         1.0      31.000000  
+25%         1.0     342.000000  
+50%         1.0     605.000000  
+75%         1.0    1009.000000  
+max         1.0    5095.000000  
+
+------------------------------
+
+02.06 - DataFrame unique value counts:
+fl_date                 31
+mkt_unique_carrier      10
+branded_code_share      15
+mkt_carrier             10
+mkt_carrier_fl_num    6725
+op_unique_carrier       25
+tail_num              5802
+op_carrier_fl_num     6725
+origin_airport_id      365
+origin                 365
+origin_city_name       358
+dest_airport_id        365
+dest                   365
+dest_city_name         358
+crs_dep_time          1242
+crs_arr_time          1329
+dup                      1
+crs_elapsed_time       467
+flights                  1
+distance              1486
+dtype: int64
+
+------------------------------
+
+02.07 - DataFrame missing value counts:
+fl_date                  0
+mkt_unique_carrier       0
+branded_code_share       0
+mkt_carrier              0
+mkt_carrier_fl_num       0
+op_unique_carrier        0
+tail_num              1499
+op_carrier_fl_num        0
+origin_airport_id        0
+origin                   0
+origin_city_name         0
+dest_airport_id          0
+dest                     0
+dest_city_name           0
+crs_dep_time             0
+crs_arr_time             0
+dup                      0
+crs_elapsed_time         0
+flights                  0
+distance                 0
+dtype: int64
+
+------------------------------
+
+02.08 - DataFrame has missing values: True
+------------------------------
+
+02.09 - DataFrame missing value percentage: 0.23%
+
+------------------------------
+
+02.10 - DataFrame head:
+     fl_date mkt_unique_carrier branded_code_share mkt_carrier  \
+0 2020-01-01                 WN                 WN          WN   
+1 2020-01-01                 WN                 WN          WN   
+2 2020-01-01                 WN                 WN          WN   
+3 2020-01-01                 WN                 WN          WN   
+4 2020-01-01                 WN                 WN          WN   
+
+   mkt_carrier_fl_num op_unique_carrier tail_num  op_carrier_fl_num  \
+0                5888                WN   N951WN               5888   
+1                6276                WN   N467WN               6276   
+2                4598                WN   N7885A               4598   
+3                4761                WN   N551WN               4761   
+4                5162                WN   N968WN               5162   
+
+   origin_airport_id origin origin_city_name  dest_airport_id dest  \
+0              13891    ONT      Ontario, CA            14771  SFO   
+1              13891    ONT      Ontario, CA            14771  SFO   
+2              13891    ONT      Ontario, CA            14831  SJC   
+3              13891    ONT      Ontario, CA            14831  SJC   
+4              13891    ONT      Ontario, CA            14831  SJC   
+
+      dest_city_name  crs_dep_time  crs_arr_time dup  crs_elapsed_time  \
+0  San Francisco, CA          1810          1945   N                95   
+1  San Francisco, CA          1150          1320   N                90   
+2       San Jose, CA          2020          2130   N                70   
+3       San Jose, CA          1340          1455   N                75   
+4       San Jose, CA           915          1035   N                80   
+
+   flights  distance  
+0        1       363  
+1        1       363  
+2        1       333  
+3        1       333  
+4        1       333  
+
+------------------------------
+
+02.11 - DataFrame tail:
+          fl_date mkt_unique_carrier branded_code_share mkt_carrier  \
+660551 2020-01-31                 DL       DL_CODESHARE          DL   
+660552 2020-01-31                 DL       DL_CODESHARE          DL   
+660553 2020-01-31                 DL       DL_CODESHARE          DL   
+660554 2020-01-31                 DL       DL_CODESHARE          DL   
+660555 2020-01-31                 DL       DL_CODESHARE          DL   
+
+        mkt_carrier_fl_num op_unique_carrier tail_num  op_carrier_fl_num  \
+660551                4954                9E   N926XJ               4954   
+660552                4955                9E   N309PQ               4955   
+660553                4956                9E   N324PQ               4956   
+660554                4957                9E   N132EV               4957   
+660555                4958                9E   N390CA               4958   
+
+        origin_airport_id origin origin_city_name  dest_airport_id dest  \
+660551              11278    DCA   Washington, DC            11193  CVG   
+660552              11278    DCA   Washington, DC            11193  CVG   
+660553              12478    JFK     New York, NY            10785  BTV   
+660554              13930    ORD      Chicago, IL            12478  JFK   
+660555              12953    LGA     New York, NY            11057  CLT   
+
+        dest_city_name  crs_dep_time  crs_arr_time dup  crs_elapsed_time  \
+660551  Cincinnati, OH          1859          2041   N               102   
+660552  Cincinnati, OH          1515          1702   N               107   
+660553  Burlington, VT          2205          2337   N                92   
+660554    New York, NY          1035          1356   N               141   
+660555   Charlotte, NC          2005          2222   N               137   
+
+        flights  distance  
+660551        1       411  
+660552        1       411  
+660553        1       266  
+660554        1       740  
+660555        1       544  
+
+------------------------------
+
+================================================================================
+
+Data Summary Report 03: fuel_comsumption_df
+================================================================================
+
+03.01 - File shape: (3035, 25)
+
+------------------------------
+
+03.02 - DataFrame columns:
+Index(['month', 'airline_id', 'unique_carrier', 'carrier', 'carrier_name',
+       'carrier_group_new', 'sdomt_gallons', 'satl_gallons', 'spac_gallons',
+       'slat_gallons', 'sint_gallons', 'ts_gallons', 'tdomt_gallons',
+       'tint_gallons', 'total_gallons', 'sdomt_cost', 'satl_cost', 'spac_cost',
+       'slat_cost', 'sint_cost', 'ts_cost', 'tdomt_cost', 'tint_cost',
+       'total_cost', 'year'],
+      dtype='object')
+
+------------------------------
+
+03.03 - DataFrame data types:
+month                  int64
+airline_id           float64
+unique_carrier        object
+carrier               object
+carrier_name          object
+carrier_group_new      int64
+sdomt_gallons        float64
+satl_gallons         float64
+spac_gallons         float64
+slat_gallons         float64
+sint_gallons         float64
+ts_gallons           float64
+tdomt_gallons        float64
+tint_gallons         float64
+total_gallons        float64
+sdomt_cost           float64
+satl_cost            float64
+spac_cost            float64
+slat_cost            float64
+sint_cost            float64
+ts_cost              float64
+tdomt_cost           float64
+tint_cost            float64
+total_cost           float64
+year                   int64
+dtype: object
+
+------------------------------
+
+03.04 - DataFrame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3035 entries, 0 to 3034
+Data columns (total 25 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   month              3035 non-null   int64  
+ 1   airline_id         3034 non-null   float64
+ 2   unique_carrier     3034 non-null   object 
+ 3   carrier            3035 non-null   object 
+ 4   carrier_name       3034 non-null   object 
+ 5   carrier_group_new  3035 non-null   int64  
+ 6   sdomt_gallons      3034 non-null   float64
+ 7   satl_gallons       3034 non-null   float64
+ 8   spac_gallons       3034 non-null   float64
+ 9   slat_gallons       3033 non-null   float64
+ 10  sint_gallons       3034 non-null   float64
+ 11  ts_gallons         3034 non-null   float64
+ 12  tdomt_gallons      3032 non-null   float64
+ 13  tint_gallons       3034 non-null   float64
+ 14  total_gallons      3029 non-null   float64
+ 15  sdomt_cost         3035 non-null   float64
+ 16  satl_cost          3034 non-null   float64
+ 17  spac_cost          3034 non-null   float64
+ 18  slat_cost          3034 non-null   float64
+ 19  sint_cost          3034 non-null   float64
+ 20  ts_cost            3035 non-null   float64
+ 21  tdomt_cost         3035 non-null   float64
+ 22  tint_cost          3034 non-null   float64
+ 23  total_cost         3035 non-null   float64
+ 24  year               3035 non-null   int64  
+dtypes: float64(19), int64(3), object(3)
+memory usage: 592.9+ KB
+
+
+------------------------------
+
+03.05 - DataFrame description:
+             month    airline_id  carrier_group_new  sdomt_gallons  \
+count  3035.000000   3034.000000        3035.000000   3.034000e+03   
+mean      6.253707  20408.932432           2.004942   1.786446e+07   
+std       3.374584    530.127448           0.808436   4.340146e+07   
+min       1.000000  19393.000000           1.000000   0.000000e+00   
+25%       3.000000  20108.000000           1.000000   0.000000e+00   
+50%       6.000000  20368.000000           2.000000   0.000000e+00   
+75%       9.000000  20436.000000           3.000000   8.256753e+06   
+max      12.000000  21974.000000           3.000000   2.062579e+08   
+
+       satl_gallons  spac_gallons  slat_gallons  sint_gallons    ts_gallons  \
+count  3.034000e+03  3.034000e+03  3.033000e+03  3.034000e+03  3.034000e+03   
+mean   3.850826e+06  3.147425e+06  2.385017e+06  9.382481e+06  2.724694e+07   
+std    1.404681e+07  9.696375e+06  8.090002e+06  3.016724e+07  7.006669e+07   
+min    0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+50%    0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+75%    0.000000e+00  0.000000e+00  0.000000e+00  1.056932e+06  1.350685e+07   
+max    8.813328e+07  5.928570e+07  5.501094e+07  1.689833e+08  3.499851e+08   
+
+       tdomt_gallons  ...    sdomt_cost     satl_cost     spac_cost  \
+count   3.032000e+03  ...  3.035000e+03  3.034000e+03  3.034000e+03   
+mean    1.827054e+07  ...  3.253424e+07  6.982969e+06  5.649611e+06   
+std     4.356032e+07  ...  8.107017e+07  2.630650e+07  1.786618e+07   
+min     0.000000e+00  ...  0.000000e+00  0.000000e+00  0.000000e+00   
+25%     3.004500e+03  ...  0.000000e+00  0.000000e+00  0.000000e+00   
+50%     3.290630e+05  ...  0.000000e+00  0.000000e+00  0.000000e+00   
+75%     1.107229e+07  ...  1.522997e+07  0.000000e+00  0.000000e+00   
+max     2.073632e+08  ...  5.321082e+08  2.321523e+08  1.636864e+08   
+
+          slat_cost     sint_cost       ts_cost    tdomt_cost     tint_cost  \
+count  3.034000e+03  3.034000e+03  3.035000e+03  3.035000e+03  3.034000e+03   
+mean   4.466445e+06  1.709902e+07  4.962763e+07  3.336389e+07  1.871540e+07   
+std    1.523063e+07  5.632559e+07  1.306560e+08  8.140905e+07  5.660487e+07   
+min    0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    0.000000e+00  0.000000e+00  0.000000e+00  3.377500e+03  0.000000e+00   
+50%    0.000000e+00  0.000000e+00  0.000000e+00  6.705760e+05  3.026640e+05   
+75%    0.000000e+00  2.018227e+06  2.163598e+07  1.850799e+07  4.117865e+06   
+max    1.208585e+08  4.883859e+08  1.020494e+09  5.383149e+08  4.942079e+08   
+
+         total_cost         year  
+count  3.035000e+03  3035.000000  
+mean   5.207313e+07  2016.839209  
+std    1.310270e+08     1.368197  
+min    0.000000e+00  2015.000000  
+25%    1.335935e+05  2016.000000  
+50%    1.229806e+06  2017.000000  
+75%    2.549956e+07  2018.000000  
+max    1.032523e+09  2019.000000  
+
+[8 rows x 22 columns]
+
+------------------------------
+
+03.06 - DataFrame unique value counts:
+month                  12
+airline_id             62
+unique_carrier         62
+carrier                65
+carrier_name           69
+carrier_group_new       3
+sdomt_gallons        1427
+satl_gallons          406
+spac_gallons          456
+slat_gallons          736
+sint_gallons          898
+ts_gallons           1493
+tdomt_gallons        2282
+tint_gallons         1869
+total_gallons        2401
+sdomt_cost           1417
+satl_cost             406
+spac_cost             456
+slat_cost             735
+sint_cost             899
+ts_cost              1483
+tdomt_cost           2275
+tint_cost            1869
+total_cost           2395
+year                    5
+dtype: int64
+
+------------------------------
+
+03.07 - DataFrame missing value counts:
+month                0
+airline_id           1
+unique_carrier       1
+carrier              0
+carrier_name         1
+carrier_group_new    0
+sdomt_gallons        1
+satl_gallons         1
+spac_gallons         1
+slat_gallons         2
+sint_gallons         1
+ts_gallons           1
+tdomt_gallons        3
+tint_gallons         1
+total_gallons        6
+sdomt_cost           0
+satl_cost            1
+spac_cost            1
+slat_cost            1
+sint_cost            1
+ts_cost              0
+tdomt_cost           0
+tint_cost            1
+total_cost           0
+year                 0
+dtype: int64
+
+------------------------------
+
+03.08 - DataFrame has missing values: True
+------------------------------
+
+03.09 - DataFrame missing value percentage: 0.82%
+
+------------------------------
+
+03.10 - DataFrame head:
+   month  airline_id unique_carrier carrier  \
+0      1         NaN           None     0JQ   
+1      1     21352.0            0WQ     0WQ   
+2      1     21645.0            23Q     23Q   
+3      1     21652.0            27Q     27Q   
+4      1     20408.0             5V      5V   
+
+                                        carrier_name  carrier_group_new  \
+0                                               None                  1   
+1                                  Avjet Corporation                  1   
+2                              Songbird Airways Inc.                  1   
+3                 Jet Aviation Flight Services, Inc.                  1   
+4  Tatonduk Outfitters Limited d/b/a Everts Air A...                  1   
+
+   sdomt_gallons  satl_gallons  spac_gallons  slat_gallons  ...  sdomt_cost  \
+0            0.0           0.0           0.0           0.0  ...         0.0   
+1            0.0           0.0           0.0           0.0  ...         0.0   
+2            0.0           0.0           0.0           0.0  ...         0.0   
+3            0.0           0.0           0.0           0.0  ...         0.0   
+4       260848.0           0.0           0.0           0.0  ...    522405.0   
+
+   satl_cost  spac_cost  slat_cost  sint_cost   ts_cost  tdomt_cost  \
+0        0.0        0.0        0.0        0.0       0.0      5100.0   
+1        0.0        0.0        0.0        0.0       0.0    396216.0   
+2        0.0        0.0        0.0        0.0       0.0         0.0   
+3        0.0        0.0        0.0        0.0       0.0         0.0   
+4        0.0        0.0        0.0        0.0  522405.0    569497.0   
+
+   tint_cost  total_cost  year  
+0        0.0      5100.0  2016  
+1   140239.0    536455.0  2016  
+2        0.0         0.0  2016  
+3        0.0         0.0  2016  
+4        0.0    569497.0  2016  
+
+[5 rows x 25 columns]
+
+------------------------------
+
+03.11 - DataFrame tail:
+      month  airline_id unique_carrier carrier                carrier_name  \
+3030     12     20377.0             X9      X9  Omni Air International LLC   
+3031     12     20207.0             XP      XP                XTRA Airways   
+3032     12     20378.0             YV      YV          Mesa Airlines Inc.   
+3033     12     20452.0             YX      YX            Republic Airline   
+3034     12     19393.0             WN      WN      Southwest Airlines Co.   
+
+      carrier_group_new  sdomt_gallons  satl_gallons  spac_gallons  \
+3030                  2            0.0           0.0           0.0   
+3031                  1            0.0           0.0           0.0   
+3032                  2            0.0           0.0           0.0   
+3033                  2        21048.0           0.0           0.0   
+3034                  3    173203901.0           0.0           0.0   
+
+      slat_gallons  ...   sdomt_cost  satl_cost  spac_cost  slat_cost  \
+3030           0.0  ...          0.0        0.0        0.0        0.0   
+3031           0.0  ...          0.0        0.0        0.0        0.0   
+3032           0.0  ...          0.0        0.0        0.0        0.0   
+3033           0.0  ...      50043.0        0.0        0.0        0.0   
+3034     2440902.0  ...  351339537.0        0.0        0.0  5730304.0   
+
+      sint_cost      ts_cost   tdomt_cost  tint_cost   total_cost  year  
+3030        0.0          0.0    1584314.0  4588387.0    6172701.0  2018  
+3031        0.0          0.0          0.0        0.0          0.0  2018  
+3032        0.0          0.0          0.0        0.0          0.0  2018  
+3033        0.0      50043.0      50043.0        0.0      50043.0  2018  
+3034  5730304.0  357069841.0  351820604.0  5730304.0  357550908.0  2018  
+
+[5 rows x 25 columns]
+
+------------------------------
+
+================================================================================
+
+Data Summary Report 04: passengers_df
+================================================================================
+
+04.01 - File shape: (2350497, 38)
+
+------------------------------
+
+04.02 - DataFrame columns:
+Index(['departures_scheduled', 'departures_performed', 'payload', 'seats',
+       'passengers', 'freight', 'mail', 'distance', 'ramp_to_ramp', 'air_time',
+       'unique_carrier', 'airline_id', 'unique_carrier_name', 'region',
+       'carrier', 'carrier_name', 'carrier_group', 'carrier_group_new',
+       'origin_airport_id', 'origin_city_market_id', 'origin',
+       'origin_city_name', 'origin_country', 'origin_country_name',
+       'dest_airport_id', 'dest_city_market_id', 'dest', 'dest_city_name',
+       'dest_country', 'dest_country_name', 'aircraft_group', 'aircraft_type',
+       'aircraft_config', 'year', 'month', 'distance_group', 'class',
+       'data_source'],
+      dtype='object')
+
+------------------------------
+
+04.03 - DataFrame data types:
+departures_scheduled     float64
+departures_performed     float64
+payload                  float64
+seats                    float64
+passengers               float64
+freight                  float64
+mail                     float64
+distance                 float64
+ramp_to_ramp             float64
+air_time                 float64
+unique_carrier            object
+airline_id                 int64
+unique_carrier_name       object
+region                    object
+carrier                   object
+carrier_name              object
+carrier_group              int64
+carrier_group_new          int64
+origin_airport_id          int64
+origin_city_market_id      int64
+origin                    object
+origin_city_name          object
+origin_country            object
+origin_country_name       object
+dest_airport_id            int64
+dest_city_market_id        int64
+dest                      object
+dest_city_name            object
+dest_country              object
+dest_country_name         object
+aircraft_group             int64
+aircraft_type              int64
+aircraft_config            int64
+year                       int64
+month                      int64
+distance_group             int64
+class                     object
+data_source               object
+dtype: object
+
+------------------------------
+
+04.04 - DataFrame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2350497 entries, 0 to 2350496
+Data columns (total 38 columns):
+ #   Column                 Dtype  
+---  ------                 -----  
+ 0   departures_scheduled   float64
+ 1   departures_performed   float64
+ 2   payload                float64
+ 3   seats                  float64
+ 4   passengers             float64
+ 5   freight                float64
+ 6   mail                   float64
+ 7   distance               float64
+ 8   ramp_to_ramp           float64
+ 9   air_time               float64
+ 10  unique_carrier         object 
+ 11  airline_id             int64  
+ 12  unique_carrier_name    object 
+ 13  region                 object 
+ 14  carrier                object 
+ 15  carrier_name           object 
+ 16  carrier_group          int64  
+ 17  carrier_group_new      int64  
+ 18  origin_airport_id      int64  
+ 19  origin_city_market_id  int64  
+ 20  origin                 object 
+ 21  origin_city_name       object 
+ 22  origin_country         object 
+ 23  origin_country_name    object 
+ 24  dest_airport_id        int64  
+ 25  dest_city_market_id    int64  
+ 26  dest                   object 
+ 27  dest_city_name         object 
+ 28  dest_country           object 
+ 29  dest_country_name      object 
+ 30  aircraft_group         int64  
+ 31  aircraft_type          int64  
+ 32  aircraft_config        int64  
+ 33  year                   int64  
+ 34  month                  int64  
+ 35  distance_group         int64  
+ 36  class                  object 
+ 37  data_source            object 
+dtypes: float64(10), int64(13), object(15)
+memory usage: 681.4+ MB
+
+
+------------------------------
+
+04.05 - DataFrame description:
+       departures_scheduled  departures_performed       payload         seats  \
+count          2.350497e+06          2.350497e+06  2.350497e+06  2.350497e+06   
+mean           2.032856e+01          2.272094e+01  8.496111e+05  2.569276e+03   
+std            3.842310e+01          3.601781e+01  1.514312e+06  4.814856e+03   
+min            0.000000e+00          0.000000e+00  0.000000e+00  0.000000e+00   
+25%            0.000000e+00          1.000000e+00  3.887900e+04  5.000000e+01   
+50%            4.000000e+00          9.000000e+00  2.520000e+05  4.960000e+02   
+75%            2.800000e+01          3.000000e+01  1.060169e+06  3.380000e+03   
+max            2.361000e+03          1.311000e+03  1.524600e+08  1.103360e+05   
+
+         passengers       freight          mail      distance  ramp_to_ramp  \
+count  2.350497e+06  2.350497e+06  2.350497e+06  2.350497e+06  2.350497e+06   
+mean   2.097178e+03  1.029555e+05  2.901765e+03  1.042512e+03  2.890172e+03   
+std    4.026722e+03  5.427418e+05  2.523352e+04  1.252014e+03  5.311266e+03   
+min    0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    1.100000e+01  0.000000e+00  0.000000e+00  2.840000e+02  1.140000e+02   
+50%    3.540000e+02  0.000000e+00  0.000000e+00  6.610000e+02  6.670000e+02   
+75%    2.661000e+03  3.528000e+03  0.000000e+00  1.234000e+03  3.675000e+03   
+max    9.577700e+04  1.316640e+08  8.163150e+06  1.032700e+04  8.957250e+05   
+
+           air_time  ...  origin_airport_id  origin_city_market_id  \
+count  2.350497e+06  ...       2.350497e+06           2.350497e+06   
+mean   2.400282e+03  ...       1.281340e+04           3.209723e+04   
+std    4.590902e+03  ...       1.613503e+03           1.532944e+03   
+min    0.000000e+00  ...       1.000500e+04           3.000300e+04   
+25%    9.000000e+01  ...       1.129800e+04           3.085200e+04   
+50%    5.370000e+02  ...       1.289200e+04           3.170300e+04   
+75%    2.892000e+03  ...       1.410000e+04           3.319500e+04   
+max    2.141040e+05  ...       1.687600e+04           3.684300e+04   
+
+       dest_airport_id  dest_city_market_id  aircraft_group  aircraft_type  \
+count     2.350497e+06         2.350497e+06    2.350497e+06   2.350497e+06   
+mean      1.280434e+04         3.208804e+04    5.513907e+00   6.059703e+02   
+std       1.614425e+03         1.532302e+03    1.540559e+00   1.665164e+02   
+min       1.000500e+04         3.000300e+04    0.000000e+00   1.000000e+01   
+25%       1.129800e+04         3.085200e+04    6.000000e+00   6.140000e+02   
+50%       1.289200e+04         3.170300e+04    6.000000e+00   6.310000e+02   
+75%       1.410000e+04         3.319200e+04    6.000000e+00   6.910000e+02   
+max       1.687600e+04         3.684300e+04    8.000000e+00   8.900000e+02   
+
+       aircraft_config          year         month  distance_group  
+count     2.350497e+06  2.350497e+06  2.350497e+06    2.350497e+06  
+mean      1.212115e+00  2.017030e+03  6.543674e+00    2.633967e+00  
+std       5.254621e-01  1.414796e+00  3.458192e+00    2.478318e+00  
+min       1.000000e+00  2.015000e+03  1.000000e+00    1.000000e+00  
+25%       1.000000e+00  2.016000e+03  4.000000e+00    1.000000e+00  
+50%       1.000000e+00  2.017000e+03  7.000000e+00    2.000000e+00  
+75%       1.000000e+00  2.018000e+03  1.000000e+01    3.000000e+00  
+max       4.000000e+00  2.019000e+03  1.200000e+01    2.100000e+01  
+
+[8 rows x 23 columns]
+
+------------------------------
+
+04.06 - DataFrame unique value counts:
+departures_scheduled        872
+departures_performed        793
+payload                  418417
+seats                     29584
+passengers                32365
+freight                  295975
+mail                      69219
+distance                   5820
+ramp_to_ramp              37857
+air_time                  34428
+unique_carrier              377
+airline_id                  377
+unique_carrier_name         377
+region                        6
+carrier                     388
+carrier_name                396
+carrier_group                 4
+carrier_group_new             8
+origin_airport_id          2513
+origin_city_market_id      2215
+origin                     2515
+origin_city_name           2280
+origin_country              154
+origin_country_name         155
+dest_airport_id            2564
+dest_city_market_id        2260
+dest                       2567
+dest_city_name             2330
+dest_country                169
+dest_country_name           169
+aircraft_group                9
+aircraft_type               199
+aircraft_config               4
+year                          5
+month                        12
+distance_group               21
+class                         4
+data_source                   4
+dtype: int64
+
+------------------------------
+
+04.07 - DataFrame missing value counts:
+departures_scheduled     0
+departures_performed     0
+payload                  0
+seats                    0
+passengers               0
+freight                  0
+mail                     0
+distance                 0
+ramp_to_ramp             0
+air_time                 0
+unique_carrier           0
+airline_id               0
+unique_carrier_name      0
+region                   0
+carrier                  0
+carrier_name             0
+carrier_group            0
+carrier_group_new        0
+origin_airport_id        0
+origin_city_market_id    0
+origin                   0
+origin_city_name         0
+origin_country           3
+origin_country_name      0
+dest_airport_id          0
+dest_city_market_id      0
+dest                     0
+dest_city_name           0
+dest_country             0
+dest_country_name        0
+aircraft_group           0
+aircraft_type            0
+aircraft_config          0
+year                     0
+month                    0
+distance_group           0
+class                    0
+data_source              0
+dtype: int64
+
+------------------------------
+
+04.08 - DataFrame has missing values: True
+------------------------------
+
+04.09 - DataFrame missing value percentage: 0.00%
+
+------------------------------
+
+04.10 - DataFrame head:
+   departures_scheduled  departures_performed    payload   seats  passengers  \
+0                   0.0                  25.0  1325240.0  4990.0      3455.0   
+1                   0.0                  11.0   362300.0  1490.0       935.0   
+2                   0.0                   4.0   129147.0   544.0       278.0   
+3                   0.0                  21.0  1906454.0  5922.0      4757.0   
+4                   0.0                  30.0  2780012.0  8460.0      5484.0   
+
+    freight  mail  distance  ramp_to_ramp  air_time  ... dest_country  \
+0      26.0   0.0    1246.0           0.0       0.0  ...           US   
+1      53.0   0.0    1404.0           0.0       0.0  ...           US   
+2       0.0   0.0    1299.0           0.0       0.0  ...           US   
+3  142688.0   0.0    2705.0           0.0       0.0  ...           US   
+4       0.0   0.0     992.0           0.0       0.0  ...           US   
+
+   dest_country_name aircraft_group aircraft_type aircraft_config  year  \
+0      United States              6           699               1  2016   
+1      United States              6           698               1  2016   
+2      United States              6           698               1  2016   
+3      United States              6           626               1  2016   
+4      United States              6           626               1  2016   
+
+   month  distance_group  class  data_source  
+0      6               3      F           IF  
+1      6               3      F           IF  
+2      6               3      F           IF  
+3      6               6      F           IF  
+4      6               2      F           IF  
+
+[5 rows x 38 columns]
+
+------------------------------
+
+04.11 - DataFrame tail:
+         departures_scheduled  departures_performed    payload   seats  \
+2350492                   0.0                  41.0  2118019.0  8155.0   
+2350493                   0.0                  69.0  2386635.0  9335.0   
+2350494                   0.0                   1.0    53951.0   200.0   
+2350495                   0.0                   1.0    91348.0   282.0   
+2350496                   0.0                  26.0   955962.0  3536.0   
+
+         passengers  freight  mail  distance  ramp_to_ramp  air_time  ...  \
+2350492      6965.0    141.0   0.0    1384.0           0.0       0.0  ...   
+2350493      8441.0      0.0   0.0    2239.0           0.0       0.0  ...   
+2350494       100.0      0.0   0.0    2239.0           0.0       0.0  ...   
+2350495       113.0      0.0   0.0    1246.0           0.0       0.0  ...   
+2350496      2641.0      0.0   0.0    1246.0           0.0       0.0  ...   
+
+        dest_country  dest_country_name aircraft_group aircraft_type  \
+2350492           US      United States              6           699   
+2350493           US      United States              6           698   
+2350494           US      United States              6           699   
+2350495           US      United States              6           626   
+2350496           US      United States              6           698   
+
+        aircraft_config  year  month  distance_group  class  data_source  
+2350492               1  2016      6               3      F           IF  
+2350493               1  2016      6               5      F           IF  
+2350494               1  2016      6               5      F           IF  
+2350495               1  2016      6               3      F           IF  
+2350496               1  2016      6               3      F           IF  
+
+[5 rows x 38 columns]
+
+------------------------------
+

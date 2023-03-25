@@ -1,0 +1,19 @@
+Accuracy: 0.9978182521161574
+Confusion Matrix:
+[[62367,     6,    12,     0,     1],
+ [   71,  5757,     2,     0,     2],
+ [   44,     5,  3600,     0,     1],
+ [    0,     2,     3,    59,     0],
+ [    2,     3,     4,     0,   478]]
+Classification Report:
+                     precision    recall  f1-score   support
+
+      carrier_delay       1.00      1.00      1.00     62386
+late_aircraft_delay       1.00      0.99      0.99      5832
+          nas_delay       0.99      0.99      0.99      3650
+     security_delay       1.00      0.92      0.96        64
+      weather_delay       0.99      0.98      0.99       487
+
+           accuracy                           1.00     72419
+          macro avg       1.00      0.98      0.99     72419
+       weighted avg       1.00      1.00      1.00     72419
